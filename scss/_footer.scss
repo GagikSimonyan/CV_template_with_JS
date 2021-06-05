@@ -1,0 +1,33 @@
+.footer {
+  background-color: $main_color; 
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  &__upText {
+    margin-bottom: 15px;
+  }
+  a {
+    color: #fff;
+    i {
+      color: #fff;
+      &:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+  &__link {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.social {
+  margin-bottom: 15px;
+  &__link {
+    display: inline-block;
+    i {
+      margin: 0 2px;
+    }
+  }
+}
+

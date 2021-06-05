@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "variables"; 
+@import "mixins";
+@import "style";
+@import "leftColumn";
+@import "workExperience";
+@import "footer";
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+  grid-template-areas: 
+  "left__column work__experience"
+  "left__column education"
+}
+
+@each $block in $blocks {
+  .#{$block} {
+    grid-area: $block;
+    background-color: #fff;
+    @include box-shadow(1px, 2px, 9px, #333);
+  }
+}
+
+@media (max-width: 601px) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 20px;
+    grid-template-areas: 
+    "left__column"
+    "work__experience"
+    "education"
+  }
+}
+
+
+

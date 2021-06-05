@@ -1,0 +1,42 @@
+@mixin subtitle($m: 25px) {
+  color: $text_color;
+  font-weight: 700;
+  margin-bottom: $m;
+}
+
+@mixin btn($bg) {
+  display: inline-block;
+  background-color: $bg;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 4px;
+  &:hover {
+    color: #000;
+    background-color: #ccc;
+  }
+}
+
+@mixin percent($padding, $backgroundColor, $color: white, $fontSize: 15px) {
+  border-radius: $percentRadius;
+  background: $backgroundColor;
+  .percent_value {
+      width: 50%;
+      display: inline-block;
+      border-radius: $percentRadius;
+      color: $color;
+      padding: $padding;
+      font-size: $fontSize;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+      background-color: $backgroundColor;
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    box-shadow: $top $left $blur $color;
+  }
+}
